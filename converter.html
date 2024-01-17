@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: black;
+        }
+        .outer{
+            border:30px ridge greenyellow ;
+           
+        }
+        .center > input[type=number]{
+            margin-top: 30px;
+            text-align: center;
+             width: 300px;
+             height: 40px;
+
+        }
+        .center > input[type=button]{
+            margin-top: 30px;
+            text-align: center;
+             width: 200px;
+             height: 40px;  
+             background-color: greenyellow; 
+             font-size: 12px;
+             font-weight: 700;
+        }
+        .outer2{
+            border: 30px ridge greenyellow;
+        
+        }
+        .outer3{
+            border: 30px ridge greenyellow;
+        
+        }
+        .outer4{
+            border: 30px ridge greenyellow;
+        
+        }
+        .outer5{
+            border: 30px ridge greenyellow;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .center{
+            border: 30px ridge greenyellow;
+            background-color: black;
+            color: white;
+            width: 500px;
+            height: 400px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 100px;
+            text-align: center;
+            font-size: 30px;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: 900;
+            margin-bottom: 120px;
+        }
+
+    </style>
+    <script>
+        function convert(){
+            let cm= Number(document.getElementById("cm").value);
+            let inch=cm/2.54;
+            let res = document.getElementById("result");
+            res.innerHTML=inch.toFixed(3)+" inches";
+
+        }
+       
+    </script>
+</head>
+<body>
+    <div class="outer">
+        <div class="outer2">
+            <div class="outer3">
+                <div class="outer4">
+                    <div class="outer5">
+    <div class="center">
+        <p>Converter <br> cm to inches</p>
+        <input type="number" name="cm" id="cm" placeholder="Enter cm"><br>
+        <input type="button" value="convert from cm to inches" onclick="convert()">
+        <p id="result"> </p>
+    </div>
+      </div>
+         </div>
+          </div>
+             </div>
+                </div>
+</body>
+</html>

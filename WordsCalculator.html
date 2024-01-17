@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(199, 237, 199);
+        }
+        .outer{
+            margin-left:600px ;
+            margin-top: 200px;
+            margin-bottom: 200px;
+            border: 1px solid black;
+            background-color: black;
+            border-radius: 5px;
+            height: 650px;
+            width: 600px;
+        }
+       textarea{
+                margin-top: 0px;
+                margin-bottom: 10px;
+                margin-left: 50px;
+                margin-right: 50px;
+                height: 400px;
+                width: 500px;
+                background-color: rgb(199, 237, 199);
+                font-size: 20px;
+        }
+        input[type=button]{
+            height: 45px;
+            width: 250px;
+            margin-left: 170px;
+            margin-top: 0px;
+            border-radius: 5px;
+            background-color: bisque;
+            color: black;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 20px;
+        }
+        .top{
+            font-size: 30px;
+            text-align: center;
+            color: bisque;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <p class="top">Type a sentence</p>
+    <textarea  id="text" cols="30" rows="10"> </textarea>
+    <input type="button" value="Calculate words" onclick="calculate()">
+    <p id="result"  class="top"></p>
+    </div>
+    <script>
+        function calculate(){
+        var sentence= document.getElementById("text").value;
+        sentence=sentence.replace(","," ");
+        var array=sentence.split(" ");
+        var length=array.length;
+        var result=document.getElementById("result").innerHTML=length+` words`;
+        }
+    </script>
+</body>
+</html>
