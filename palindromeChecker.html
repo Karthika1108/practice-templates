@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background-color: black;
+    }
+    .outer{
+        margin-top: 50px;
+        margin-left: 600px;
+        border: 10px ridge white;
+        border-radius: 20px;
+        height: 600px;
+        width: 400px;
+    }
+    textarea{
+        height: 300px;
+        width: 320px;
+        margin-top: 20px;
+        margin-left: 40px;
+    }
+    .top{
+        color: white;
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 30px;
+        font-weight: 900;
+        text-align: center;
+    }
+    .button{
+        height: 40px;
+        width: 150px;
+        background-color: black;
+        color: white;
+        margin-top: 30px;
+        margin-left: 130px;
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 25px;
+        font-weight: 700;
+        border: 5px ridge white;
+        border-radius: 20px;
+    }
+    .button:hover{
+        border: 7px ridge black;
+        color: black;
+        background-color: white;
+    }
+</style>
+<body oncontextmenu="return false" ondblclick="location.href='https://google.com'">
+    <div class="outer">
+        <p class="top">PALINDROME CHECKER</p>
+       <textarea name="text" id="text" cols="30" rows="10"></textarea>
+       <button class="button" onclick="check()">CHECK</button>
+       <p id="result" class="top"></p>
+    </div>
+    <script>
+        function check(){
+        var sentence=document.querySelector("#text").value;
+        sentence=sentence.replaceAll(" ","").toUpperCase();
+        var arr=sentence.split("").reverse().join("");
+        if(sentence===arr)
+        var res="PALINDROME";
+    else
+    var res="NOT PALINDROME";
+        var result=document.getElementById("result").innerHTML=res;
+        }
+    </script>
+</body>
+</html>
