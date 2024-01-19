@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input{
+            height: 30px;
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <input type="text" name="calc" id="calc">
+        <button onclick="calculate()">get answer</button>
+        <p id="text"></p>
+        <script>
+          //  button.addEventListener('click',calculate);
+            function calculate(){
+            var value=document.getElementById("calc").value;
+           
+            if(value.includes("+")){
+                value=value.split("+");
+                var a=value[0];
+                var b=value[1];
+                var result=a+b;
+            
+            }
+            else if(value.includes("-")){
+                value=value.split("-");
+                var a=value[0];
+                var b=value[1];
+                var result=a-b;
+            }
+            else if(value.includes("*")){
+                value=value.split("*");
+                var a=value[0];
+                var b=value[1];
+                var result=a*b;
+            }
+            else if(value.includes("/")){
+                value=value.split("/");
+                var a=value[0];
+                var b=value[1];
+                var result=parseInt(a)/parseInt(b);
+            }
+            document.getElementById("text").innerHTML=result;
+        }
+        </script>
+    </div>
+</body>
+</html>
