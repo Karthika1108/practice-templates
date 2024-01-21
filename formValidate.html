@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+    <div class="container">
+        <div class="innerContainer">
+            <form action="" id="form">
+            <label class="top" for="name">REGISTER</label>
+            <div >
+           <label for="name">NAME</label><br>
+           <input type="text" name="name" id="name" >
+           <div id="error"></div>
+           </div>
+           <BR>
+            <div>
+            <label for="email">EMAIL</label><br>
+            <input type="email" name="email" id="email">
+            <div id="error"></div><BR>
+            </div>
+            <div>
+             <label for="psd">PASSWORD</label><br>
+           <input type="password" name="PASSWORD" id="psd">
+           <div id="error"></div><BR>
+           </div>
+           <div>
+            <label for="Cpsd">CONFORM PASSWORD</label><br>
+           <input type="password" name="password" id="Cpsd"> 
+           <div id="error"></div><br>
+          </div>
+            <button type="submit">Submit</button>
+        </form>
+        </div>
+
+    </div>
+    <script src="validate.js">
+    </script>
+    
+</body>
+</html>
